@@ -7,3 +7,7 @@ mail:
 server:
   port: 80
 
+#kjsdhgkfhxg: jkhdfgkjhdfg
+my-properties:
+  host: mysite.com
+  port: 8091

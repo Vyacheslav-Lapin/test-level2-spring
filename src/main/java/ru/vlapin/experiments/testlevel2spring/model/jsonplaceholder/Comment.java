@@ -1,11 +1,8 @@
 package ru.vlapin.experiments.testlevel2spring.model.jsonplaceholder;
 
-import static lombok.AccessLevel.PRIVATE;
-
+import javax.validation.constraints.Pattern;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.jackson.Jacksonized;
 
 @Getter
@@ -16,6 +13,9 @@ public class Comment {
   Long postId;
   Long id;
   String name;
+
+  @Pattern(regexp = "^[\\w.]+@[\\w.]+$")
   String email;
+
   String body;
 }
