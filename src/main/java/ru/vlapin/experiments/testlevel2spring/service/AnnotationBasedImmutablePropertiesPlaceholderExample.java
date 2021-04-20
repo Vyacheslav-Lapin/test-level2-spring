@@ -9,6 +9,7 @@ import lombok.experimental.NonFinal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConstructorBinding;
+import ru.vlapin.experiments.testlevel2spring.common.LogLevel;
 import ru.vlapin.experiments.testlevel2spring.common.Loggable;
 import ru.vlapin.experiments.testlevel2spring.dao.CatRepository;
 import ru.vlapin.experiments.testlevel2spring.model.Cat;
@@ -42,8 +43,8 @@ public class AnnotationBasedImmutablePropertiesPlaceholderExample {
    */
   String password;
 
-  @Loggable
-  public Cat getCat() {
+  @Loggable(LogLevel.WARN)
+  public Cat getCat(int id) {
     return catRepository.findAll().get(0);
   }
 }

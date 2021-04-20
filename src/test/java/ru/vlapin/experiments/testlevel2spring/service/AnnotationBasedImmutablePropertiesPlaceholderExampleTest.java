@@ -19,7 +19,7 @@ class AnnotationBasedImmutablePropertiesPlaceholderExampleTest {
   @SneakyThrows
   @DisplayName("getCat method works correctly")
   void getCatMethodWorksCorrectlyTest() {
-    Assertions.assertThat(catService.getCat()).isNotNull()
+    Assertions.assertThat(catService.getCat(1)).isNotNull()
         .extracting(Cat::getName)
         .isNotNull();
   }
