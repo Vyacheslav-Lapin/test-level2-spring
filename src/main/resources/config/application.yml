@@ -3,3 +3,7 @@ mail:
     authMethod: basic
     username: user
     password: qwerty
+
+server:
+  port: 80
+

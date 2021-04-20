@@ -1,12 +1,12 @@
 package ru.vlapin.experiments.testlevel2spring.model.jsonplaceholder;
 
-import static lombok.AccessLevel.PRIVATE;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.extern.jackson.Jacksonized;
 
-import lombok.Data;
-import lombok.Setter;
-
-@Data
-@Setter(PRIVATE)
+@Getter
+@Builder
+@Jacksonized
 public class User {
 
   Long id;

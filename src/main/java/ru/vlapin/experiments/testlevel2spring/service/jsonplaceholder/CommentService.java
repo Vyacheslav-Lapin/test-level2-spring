@@ -3,6 +3,7 @@ package ru.vlapin.experiments.testlevel2spring.service.jsonplaceholder;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,7 @@ public interface CommentService {
   @GetMapping("{id}")
   Comment findById(@PathVariable Long id);
 
-  @GetMapping("posts/{postId}/comments")
-  List<Comment> commentsByPostId(@PathVariable @NotNull Long postId);
+//  @GetMapping("posts/{postId}/comments")
+  @GetMapping
+  ResponseEntity<List<Comment>> commentsByPostId(@RequestParam @NotNull Long postId);
 }

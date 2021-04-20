@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TestLevel2SpringApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TestLevel2SpringApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(TestLevel2SpringApplication.class, args);
+  }
 }

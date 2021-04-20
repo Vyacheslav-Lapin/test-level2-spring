@@ -1,0 +1,16 @@
+GET http://localhost/api/posts/57 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Accept-Charset: UTF-8
+Host: localhost
+
+{
+  "kjhdfg": ",jhdf"
+}
+
+###
+GET https://jsonplaceholder.typicode.com/comments?postId=1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Accept-Charset: UTF-8
+Host: jsonplaceholder.typicode.com
